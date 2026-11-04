@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hortifrut Perú: Precios en Baja y Dependencia de EE. UU. | Presentación Ejecutiva</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .slide { display: none; }
+    .slide.active { display: flex; animation: fadeIn 0.35s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .custom-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP BAR / HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur px-6 py-3.5 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <div class="bg-blue-600 text-white font-extrabold px-3 py-1 rounded-md tracking-wider text-xs shadow-md shadow-blue-500/20">
+        ADEX <span class="text-blue-200 font-normal">ESCUELA</span>
+      </div>
+      <div class="h-4 w-px bg-slate-700 hidden sm:block"></div>
+      <span class="text-xs sm:text-sm font-semibold text-slate-300 truncate max-w-[280px] sm:max-w-xl">
+        Hortifrut Perú ante El Niño 2026-27 | Precios en baja y dependencia de EE. UU.
+      </span>
+    </div>
+    <div class="flex items-center space-x-3 text-xs font-semibold text-slate-400">
+      <span class="bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700 flex items-center gap-1.5">
+        <i class="fa-regular fa-clone text-blue-400"></i>
+        Slide <span id="current-slide-num" class="text-blue-400 font-bold">1</span> de 6
+      </span>
+      <button onclick="toggleFullScreen()" class="p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition" title="Pantalla completa">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN SLIDES CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 flex flex-col justify-center">
+
+    <!-- SLIDE 1: PORTADA & SÍNTESIS EJECUTIVA -->
+    <section id="slide-1" class="slide active flex-col gap-6">
+      <div class="inline-flex items-center gap-2 self-start bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs px-3 py-1.5 rounded-full font-semibold">
+        <i class="fa-solid fa-graduation-cap"></i> IA Aplicada a los Negocios | Evaluación Final (EC3)
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight tracking-tight">
+            Hortifrut Perú ante <br>
+            <span class="bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300 bg-clip-text text-transparent">
+              El Niño 2026-27
+            </span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-300 font-medium">
+            Precios en baja, riesgo climático y dependencia comercial de Estados Unidos.
+          </p>
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-sm text-slate-300 space-y-2">
+            <div class="flex items-center gap-2 font-semibold text-slate-200">
+              <i class="fa-solid fa-bullseye text-rose-400"></i> Pregunta Estratégica Clave:
+            </div>
+            <p class="italic text-slate-300 text-xs sm:text-sm">
+              "¿Qué tan vulnerable es Hortifrut Perú a una menor oferta por El Niño y qué decisiones de mercado reducen ese riesgo?"
+            </p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs">
+            <div class="bg-slate-900/70 border border-slate-800 p-3 rounded-lg">
+              <span class="text-slate-400 block">Estudiante</span>
+              <strong class="text-slate-200">Franchesca Pozzo R.</strong>
+            </div>
+            <div class="bg-slate-900/70 border border-slate-800 p-3 rounded-lg">
+              <span class="text-slate-400 block">Docente</span>
+              <strong class="text-slate-200">David Ricardo Blas L.</strong>
+            </div>
+            <div class="bg-slate-900/70 border border-slate-800 p-3 rounded-lg col-span-2 sm:col-span-1">
+              <span class="text-slate-400 block">Herramientas</span>
+              <strong class="text-indigo-400"><i class="fa-solid fa-robot mr-1"></i>Julius AI + ADEX</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-1 gap-4">
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800/80 border border-slate-800 p-5 rounded-2xl shadow-xl">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Ventas Totales 2025</span>
+              <i class="fa-solid fa-chart-line text-blue-400"></i>
+            </div>
+            <div class="text-3xl font-extrabold text-white">US$ 181.0 M</div>
+            <p class="text-xs text-rose-400 font-medium mt-1">
+              <i class="fa-solid fa-arrow-trend-down"></i> -14.9% vs. 2024 (US$ 212.7M) con el mismo volumen exportado
+            </p>
+          </div>
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800/80 border border-slate-800 p-5 rounded-2xl shadow-xl">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Concentración EE. UU.</span>
+              <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+            </div>
+            <div class="text-3xl font-extrabold text-amber-400">50.7% - 56%</div>
+            <p class="text-xs text-slate-400 mt-1">Top 3 destinos absorben hasta el 81% de las exportaciones (HHI > 2,900)</p>
+          </div>
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800/80 border border-slate-800 p-5 rounded-2xl shadow-xl">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Riesgo Climático Inmediato</span>
+              <i class="fa-solid fa-cloud-bolt text-rose-400"></i>
+            </div>
+            <div class="text-2xl font-bold text-rose-300">-31.2% Envíos Pico</div>
+            <p class="text-xs text-slate-400 mt-1">Estimación Proarándanos para las 8 semanas de mayor volumen comercial</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: FASE 1 - EL PROBLEMA Y LA DATA -->
+    <section id="slide-2" class="slide flex-col gap-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Fase 1</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">El Problema Comercial & Límites de la Data</h2>
+        </div>
+        <div class="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+          Fuente: ADEX Data Trade / Aduanas Perú
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <!-- Tabla comparativa histórica -->
+        <div class="lg:col-span-7 bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between">
+          <h3 class="text-sm font-bold text-slate-200 mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-table text-blue-400"></i> Tabla 1: Indicadores de Exportación de Hortifrut Perú (2023 - 2026)
+          </h3>
+          <div class="overflow-x-auto custom-scroll">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-slate-400 bg-slate-800/50">
+                  <th class="p-2.5">Indicador</th>
+                  <th class="p-2.5 text-center">2023</th>
+                  <th class="p-2.5 text-center">2024</th>
+                  <th class="p-2.5 text-center text-rose-300 font-bold">2025</th>
+                  <th class="p-2.5 text-center text-amber-300">2026 (ene-ago)*</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800 text-slate-300 font-medium">
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-2.5">Valor FOB (US$ Millones)</td>
+                  <td class="p-2.5 text-center">147.7</td>
+                  <td class="p-2.5 text-center">212.7</td>
+                  <td class="p-2.5 text-center text-white font-bold">181.0</td>
+                  <td class="p-2.5 text-center">47.2</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-2.5">Peso Neto (M de kg)</td>
+                  <td class="p-2.5 text-center">23.6</td>
+                  <td class="p-2.5 text-center">36.6</td>
+                  <td class="p-2.5 text-center text-sky-300 font-semibold">36.7</td>
+                  <td class="p-2.5 text-center">9.0</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 bg-rose-500/5">
+                  <td class="p-2.5 font-bold text-rose-300">Precio Promedio (US$/kg)</td>
+                  <td class="p-2.5 text-center">$6.26</td>
+                  <td class="p-2.5 text-center">$5.80</td>
+                  <td class="p-2.5 text-center font-bold text-rose-400">$4.94</td>
+                  <td class="p-2.5 text-center">$5.25</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-2.5">Participación EE. UU. (%)</td>
+                  <td class="p-2.5 text-center">56.0%</td>
+                  <td class="p-2.5 text-center">50.9%</td>
+                  <td class="p-2.5 text-center">50.7%</td>
+                  <td class="p-2.5 text-center">54.0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-3 italic border-t border-slate-800 pt-2">
+            * 2026 solo cubre de enero a agosto. La variación de -73.9% del archivo aduanero no es real, responde a la estacionalidad normal del arándano.
+          </p>
+        </div>
+
+        <!-- Hallazgos clave y alcance metodológico -->
+        <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+          <div class="bg-slate-900/70 border border-rose-500/30 p-4 rounded-xl">
+            <h4 class="text-sm font-bold text-rose-400 flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-triangle-exclamation"></i> Diagnóstico del Problema Comercial
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              En 2025 se exportaron prácticamente los mismos kilos que en 2024 (+0.08%), pero se ingresó <strong>14.9% menos (-US$ 31.7 millones)</strong>. La empresa llega a El Niño con precios erosionados y sin margen para compensar mermas de volumen en su destino principal.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/70 border border-slate-800 p-4 rounded-xl">
+            <h4 class="text-sm font-bold text-slate-200 flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-filter text-indigo-400"></i> Rigor Analítico & Alcance de la Base
+            </h4>
+            <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+              <li><strong>Prohibición analítica:</strong> No comparar los 8 meses parciales de 2026 con años completos.</li>
+              <li><strong>Alcance:</strong> Corresponde exclusivamente a Hortifrut Perú S.A.C. (RUC 20602822533).</li>
+              <li><strong>Objetivo:</strong> Mide la <em>vulnerabilidad ex-ante</em> de la empresa frente al recorte, no un impacto consumado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: FASE 2 (PARTE A) - INGENIERÍA DE PROMPT 1 Y DESCOMPOSICIÓN MATEMÁTICA -->
+    <section id="slide-3" class="slide flex-col gap-5">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Fase 2 (A) · Julius AI</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">Prompt 1: Descomposición Precio vs. Volumen</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="togglePromptView(1)" id="btn-toggle-p1" class="text-xs bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/50 px-3 py-1 rounded-full transition flex items-center gap-1.5">
+            <i class="fa-solid fa-code"></i> <span id="label-toggle-p1">Ver Prompt & Respuesta IA</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- VISTA PRINCIPAL: GRÁFICO + TARJETAS DE EFECTO -->
+      <div id="view-charts-p1" class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        <!-- Gráfico del valor y precio -->
+        <div class="lg:col-span-7 bg-slate-900/70 border border-slate-800 rounded-2xl p-5 shadow-lg">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-sm font-bold text-slate-200">
+              Figura 1: Evolución de Valor FOB vs. Precio Promedio (2023 - 2025)
+            </h3>
+            <span class="text-xs text-slate-400">Escala dual</span>
+          </div>
+          <div class="h-60 sm:h-64 w-full relative">
+            <canvas id="chartFobPrecio"></canvas>
+          </div>
+        </div>
+
+        <!-- Tarjetas Descomposición Efecto Precio vs Efecto Volumen -->
+        <div class="lg:col-span-5 space-y-3.5 flex flex-col justify-between">
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Caída Total 2025 vs 2024</div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-rose-400">-US$ 31.67 M <span class="text-sm font-normal text-slate-400">(-14.89%)</span></div>
+            <p class="text-[11px] text-slate-300 mt-1">Calculado por Julius AI aislando factores con precisión matemática:</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-rose-950/40 border border-rose-800/60 p-3.5 rounded-xl">
+              <div class="text-xs font-semibold text-rose-300 mb-1 flex items-center gap-1">
+                <i class="fa-solid fa-arrow-down"></i> Efecto Precio
+              </div>
+              <div class="text-lg sm:text-xl font-bold text-rose-400">-US$ 31.84 M</div>
+              <p class="text-[10px] text-slate-400 mt-1">(ΔPrecio × kg 2025). Explica el 100.5% de la pérdida bruta.</p>
+            </div>
+
+            <div class="bg-emerald-950/30 border border-emerald-800/60 p-3.5 rounded-xl">
+              <div class="text-xs font-semibold text-emerald-300 mb-1 flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up"></i> Efecto Volumen
+              </div>
+              <div class="text-lg sm:text-xl font-bold text-emerald-400">+US$ 0.17 M</div>
+              <p class="text-[10px] text-slate-400 mt-1">(Δkg × Precio 2024). Aporte positivo marginal de apenas +29.9K kg.</p>
+            </div>
+          </div>
+
+          <div class="p-3 bg-blue-950/40 border border-blue-800/40 rounded-xl text-xs text-blue-200">
+            <strong>Conclusión Julius AI:</strong> La caída de ingresos responde casi por completo a menores precios de venta en destino y no a un déficit de producción física.
+          </div>
+        </div>
+      </div>
+
+      <!-- VISTA ALTERNATIVA: PROMPT & RESPUESTA COMPLETA DE JULIUS AI -->
+      <div id="view-code-p1" class="hidden grid-cols-1 lg:grid-cols-2 gap-5">
+        <div class="bg-slate-900 border border-indigo-900/60 rounded-2xl p-4 flex flex-col">
+          <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
+            <span class="text-xs font-bold text-indigo-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-terminal"></i> Prompt 1 Formulado (Ingeniería de Prompts)
+            </span>
+            <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">Estructura R-C-T-F</span>
+          </div>
+          <pre class="text-[11px] text-slate-300 font-mono whitespace-pre-wrap leading-relaxed overflow-y-auto max-h-72 custom-scroll bg-slate-950 p-3 rounded-xl border border-slate-800">
+Actúa como Analista Financiero y de Inteligencia Comercial Agroexportadora.
+Te adjunto un Archivo Excel ADT-X-MERC-20261102.xlsx con las exportaciones de Hortifrut Perú S.A.C. de arándano fresco (partida 0810.40) por país de destino, periodo 2023-2026. Nota: El año 2026 solo contiene datos parciales de enero a agosto.
+
+Tu tarea es la siguiente:
+1. Procesar las columnas de Valor FOB (US$) y Peso Neto (kg) para calcular el total anual exportado y el precio promedio FOB por kg de cada año (2023 a 2026).
+2. Descomponer matemáticamente la variación del valor exportado en 2025 respecto al 2024, separando el 'Efecto Volumen' (variación de kg × precio 2024) del 'Efecto Precio' (variación de precio × kg 2025).
+3. No comparar el periodo parcial 2026 con años completos.
+Realízalo en una tabla corta y 3 líneas de conclusión ejecutiva.</pre>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col">
+          <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
+            <span class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-robot"></i> Salida Generada por Julius AI
+            </span>
+            <span class="text-[10px] bg-emerald-950/60 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded">Validada vs Excel</span>
+          </div>
+          <div class="text-[11px] text-slate-300 space-y-2 overflow-y-auto max-h-72 custom-scroll bg-slate-950 p-3 rounded-xl border border-slate-800">
+            <p><strong>Resultado de referencia Julius AI:</strong></p>
+            <p>En 2025, los ingresos FOB disminuyeron <strong>US$ 31.667.557,12 (-14,89%)</strong> respecto de 2024, principalmente por la reducción del precio promedio FOB/kg de 14,96%.</p>
+            <div class="p-2 bg-slate-900 rounded border border-slate-800 font-mono text-[10.5px]">
+              • <strong>Efecto volumen:</strong> (kg 2025 - kg 2024) × precio 2024 = <strong>+US$ 173.862,45</strong> (peso aumentó apenas 29.950 kg, +0.08%).<br>
+              • <strong>Efecto precio:</strong> (precio 2025 - precio 2024) × kg 2025 = <strong>-US$ 31.841.419,57</strong>.
+            </div>
+            <p class="text-slate-400 italic">"Es decir, la caída de ingresos se explica casi por completo por el precio y no por vender menos kilos."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: FASE 2 (PARTE B) - PROMPT 2, TOP 5 Y MAPA DE CALOR INTERACTIVO -->
+    <section id="slide-4" class="slide flex-col gap-4">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
+        <div>
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Fase 2 (B) · Julius AI</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">Prompt 2: Top 5 de Mercados & Simulación</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="toggleTabSlide4('sim')" id="tab-btn-sim" class="text-xs bg-blue-600 text-white font-bold px-3 py-1 rounded-lg transition shadow-sm">
+            <i class="fa-solid fa-chart-column mr-1"></i> Precios & Simulación
+          </button>
+          <button onclick="toggleTabSlide4('heatmap')" id="tab-btn-heat" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-3 py-1 rounded-lg border border-slate-700 transition">
+            <i class="fa-solid fa-fire text-amber-400 mr-1"></i> Mapa de Calor (Figura 4)
+          </button>
+          <button onclick="toggleTabSlide4('prompt')" id="tab-btn-p2" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-3 py-1 rounded-lg border border-slate-700 transition">
+            <i class="fa-solid fa-code text-indigo-400 mr-1"></i> Prompt 2
+          </button>
+        </div>
+      </div>
+
+      <!-- PESTAÑA 1: TOP 5 PRECIOS Y SIMULADOR INTERACTIVO -->
+      <div id="tab-content-sim" class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        <div class="lg:col-span-6 bg-slate-900/70 border border-slate-800 rounded-2xl p-4">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-xs sm:text-sm font-bold text-slate-200">
+              Figura 2: Precios FOB/kg Top 5 vs. EE. UU. (2025)
+            </h3>
+            <span class="text-[11px] text-slate-400">Benchmark EE. UU.: $4.86</span>
+          </div>
+          <div class="h-56 sm:h-64 w-full relative">
+            <canvas id="chartTop5Precios"></canvas>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-400 flex items-center justify-between border-t border-slate-800 pt-1.5">
+            <span>Máxima prima: <strong class="text-emerald-400">España (+8.49%)</strong></span>
+            <span>China: <strong class="text-emerald-400">+7.89%</strong> | HK: <strong class="text-emerald-400">+5.66%</strong></span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xs sm:text-sm font-bold text-slate-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-sliders text-indigo-400"></i> Simulación: Reasignación de Volumen desde EE. UU.
+              </h3>
+              <span class="text-[10px] bg-indigo-950 text-indigo-300 border border-indigo-800 px-2 py-0.5 rounded">
+                Base 2025
+              </span>
+            </div>
+            <p class="text-xs text-slate-300 mb-3">
+              Seleccione el porcentaje de volumen reasignado hacia el Top 5 (promedio ponderado US$ 5.048/kg):
+            </p>
+
+            <div class="grid grid-cols-3 gap-2.5 mb-3">
+              <button onclick="setScenario(10)" id="btn-scen-10" class="scenario-btn p-2.5 rounded-xl border border-blue-500 bg-blue-600/30 text-white font-bold text-center transition">
+                <span class="block text-[10px] text-slate-300 font-normal">Escenario</span>
+                10%
+              </button>
+              <button onclick="setScenario(15)" id="btn-scen-15" class="scenario-btn p-2.5 rounded-xl border border-slate-800 bg-slate-900 text-slate-300 font-bold text-center transition hover:border-slate-600">
+                <span class="block text-[10px] text-slate-400 font-normal">Escenario</span>
+                15%
+              </button>
+              <button onclick="setScenario(20)" id="btn-scen-20" class="scenario-btn p-2.5 rounded-xl border border-slate-800 bg-slate-900 text-slate-300 font-bold text-center transition hover:border-slate-600">
+                <span class="block text-[10px] text-slate-400 font-normal">Escenario</span>
+                20%
+              </button>
+            </div>
+
+            <div class="bg-slate-950 border border-slate-800 p-3.5 rounded-xl space-y-2">
+              <div class="flex justify-between items-center border-b border-slate-800/80 pb-1.5 text-xs">
+                <span class="text-slate-400">Volumen redistribuido:</span>
+                <span id="scen-kg" class="font-bold text-white">1,887,365 kg (1.89 M kg)</span>
+              </div>
+              <div class="flex justify-between items-center border-b border-slate-800/80 pb-1.5 text-xs">
+                <span class="text-slate-400">Ingreso FOB adicional:</span>
+                <span id="scen-ingreso" class="text-base font-extrabold text-emerald-400">+US$ 356,304</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-400">Impacto en facturación total:</span>
+                <span id="scen-pct" class="font-semibold text-blue-300">+0.20% del total 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 p-2.5 bg-slate-950/80 border border-slate-800 rounded-lg text-[11px] text-slate-300">
+            <strong><i class="fa-solid fa-check text-emerald-400 mr-1"></i>Decisión clave:</strong> Incrementa el ingreso total sin aumentar los costos de producción agrícola en campo.
+          </div>
+        </div>
+      </div>
+
+      <!-- PESTAÑA 2: MAPA DE CALOR (FIGURA 4 DEL DOCUMENTO) -->
+      <div id="tab-content-heatmap" class="hidden bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex-col justify-between">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <div>
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-fire text-amber-400"></i> Figura 4: Mapa de Calor del Precio FOB/kg según Mercado de Destino (2023 - 2026)
+            </h3>
+            <p class="text-[11px] text-slate-400">Visualización de retornos por kilo (US$/kg). En paréntesis, la participación en el valor FOB 2025.</p>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] text-slate-400">
+            <span>Escala térmica:</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-600 text-white font-bold">$7.5 - $8.2</span>
+            <span class="px-2 py-0.5 rounded bg-amber-600 text-white font-bold">$5.5 - $6.5</span>
+            <span class="px-2 py-0.5 rounded bg-rose-700 text-white font-bold">&lt; $5.0</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scroll">
+          <table class="w-full text-center text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-950 text-slate-300 font-bold">
+                <th class="p-2.5 text-left">Mercado de Destino (% Valor 2025)</th>
+                <th class="p-2.5">2023</th>
+                <th class="p-2.5">2024</th>
+                <th class="p-2.5">2025</th>
+                <th class="p-2.5">2026 (ene-ago)*</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/80 font-medium">
+              <tr>
+                <td class="p-2 text-left font-bold text-slate-200">Estados Unidos (50.7%)</td>
+                <td class="p-2 bg-amber-500/20 text-amber-300">$6.40</td>
+                <td class="p-2 bg-amber-500/10 text-slate-200">$5.68</td>
+                <td class="p-2 bg-rose-600/30 text-rose-300 font-bold">$4.86</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.29</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-left font-bold text-slate-200">España (3.6%)</td>
+                <td class="p-2 bg-rose-600/20 text-rose-300">$4.76</td>
+                <td class="p-2 bg-slate-800/60 text-slate-300">$5.50</td>
+                <td class="p-2 bg-emerald-600/30 text-emerald-300 font-bold">$5.27</td>
+                <td class="p-2 bg-emerald-600/40 text-emerald-200 font-bold">$5.38 (Mayor)</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-left font-bold text-slate-200">China (6.8%)</td>
+                <td class="p-2 bg-emerald-600/60 text-white font-bold">$7.95</td>
+                <td class="p-2 bg-rose-600/20 text-rose-300">$4.98</td>
+                <td class="p-2 bg-emerald-600/30 text-emerald-300 font-bold">$5.24</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.13</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-left font-bold text-slate-200">Hong Kong (6.9%)</td>
+                <td class="p-2 bg-emerald-600/70 text-white font-extrabold">$8.23</td>
+                <td class="p-2 bg-emerald-600/40 text-emerald-200 font-bold">$6.91</td>
+                <td class="p-2 bg-emerald-600/30 text-emerald-300 font-bold">$5.13</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.12</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-left font-bold text-slate-200">Países Bajos (14.6%)</td>
+                <td class="p-2 bg-slate-800/60 text-slate-300">$5.55</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.39</td>
+                <td class="p-2 bg-slate-800/70 text-slate-200">$4.96</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.14</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-left font-bold text-slate-200">Reino Unido (9.0%)</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.21</td>
+                <td class="p-2 bg-amber-500/10 text-slate-200">$5.79</td>
+                <td class="p-2 bg-rose-600/20 text-rose-300">$4.91</td>
+                <td class="p-2 bg-slate-800/50 text-slate-300">$5.04</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-[10.5px] text-slate-400 mt-2 italic border-t border-slate-800 pt-1.5">
+          * Hallazgo clave: En 2026 (ene-ago), España es el único destino del Top 5 que continúa superando a EE. UU. (US$ 5.38 vs. US$ 5.29/kg), confirmándose como prioridad estratégica.
+        </p>
+      </div>
+
+      <!-- PESTAÑA 3: PROMPT 2 & RESPUESTA COMPLETA -->
+      <div id="tab-content-prompt" class="hidden grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 flex flex-col">
+          <span class="text-xs font-bold text-indigo-400 mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-terminal"></i> Prompt 2: Filtro Top 5 & Simulación
+          </span>
+          <pre class="text-[10.5px] text-slate-300 font-mono whitespace-pre-wrap leading-relaxed overflow-y-auto max-h-64 custom-scroll bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+Eres Especialista en Inteligencia Comercial. Continuando con el archivo ADT-X-MERC-20261102.xlsx, necesitamos enfocarnos ÚNICAMENTE en los principales mercados de exportación...
+1. Filtra y analiza únicamente el TOP 5 de mercados alternativos más relevantes que paguen un precio por kg superior a EE. UU.
+2. Muestra una sola tabla corta que resuma:
+   - Porcentaje de ventas a EE. UU. y el índice HHI.
+   - Comparación de precios FOB/kg del Top 5 de mercados seleccionados vs. EE. UU.
+3. Simula en una tabla de 3 filas el dinero extra generado si reasignamos el 10%, 15% y 20% del volumen de EE. UU. hacia este Top 5 de destinos.
+4. Redacta 3 recomendaciones comerciales de máximo 2 líneas cada una.</pre>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 flex flex-col">
+          <span class="text-xs font-bold text-emerald-400 mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-robot"></i> Salida Generada por Julius AI
+          </span>
+          <div class="text-[10.5px] text-slate-300 space-y-1.5 overflow-y-auto max-h-64 custom-scroll bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+            <p><strong>Resultados Julius AI (2025):</strong></p>
+            <div class="font-mono text-[10px] space-y-0.5 bg-slate-900 p-2 rounded border border-slate-800">
+              <div>• Ventas EE. UU. / FOB total: <strong>50,66%</strong></div>
+              <div>• HHI de todos los destinos: <strong>2.983 / 10.000 (Alta concentración)</strong></div>
+              <div>• Precio referencia EE. UU.: <strong>US$ 4,8590/kg</strong></div>
+              <div>• España: US$ 5,2717 (+8,49%) | China: US$ 5,2422 (+7,89%)</div>
+              <div>• Hong Kong: US$ 5,1341 (+5,66%) | Países Bajos: US$ 4,9593 (+2,06%)</div>
+            </div>
+            <p class="font-semibold text-emerald-300">Simulación reasignación base 2025:</p>
+            <div class="font-mono text-[10px] space-y-0.5 bg-slate-900 p-2 rounded border border-slate-800">
+              <div>• 10% (1.887.365 kg) → <strong>+US$ 356.304</strong></div>
+              <div>• 15% (2.831.048 kg) → <strong>+US$ 534.455</strong></div>
+              <div>• 20% (3.774.731 kg) → <strong>+US$ 712.607</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: FASE 3 - ÉTICA, GOBERNANZA & MARCO LEGAL DE IA -->
+    <section id="slide-5" class="slide flex-col gap-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Fase 3</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">Evaluación Ética, Marco Legal y Gobierno de la IA</h2>
+        </div>
+        <div class="text-xs text-emerald-300 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">
+          Riesgo Bajo a Moderado
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Columna 1: Marco Legal -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-10 w-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-3 text-lg font-bold">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Marco Normativo</h3>
+            <p class="text-xs text-slate-400 mb-3">Alineación estricta con directrices internacionales y legislación peruana:</p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                <span><strong>UNESCO (2022):</strong> Principios de transparencia y supervisión activa.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                <span><strong>Ley 31814 (Perú):</strong> Marco para el uso y desarrollo ético de la IA.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-400 mt-0.5"></i>
+                <span><strong>Ley 29733:</strong> Protección de datos mediante uso exclusivo de registros aduaneros agregados.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 italic">
+            Sin exposición de contratos confidenciales en la nube.
+          </div>
+        </div>
+
+        <!-- Columna 2: Mitigación de Riesgos -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-3 text-lg font-bold">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Gestión de Riesgos</h3>
+            <p class="text-xs text-slate-400 mb-3">Controles técnicos implementados:</p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-shield-cat text-amber-400 mt-0.5"></i>
+                <span><strong>Anti-Alucinaciones:</strong> Verificación manual obligatoria de Julius AI vs. base Excel original.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-user-check text-amber-400 mt-0.5"></i>
+                <span><strong>Human-in-the-Loop:</strong> La IA propone escenarios; la Gerencia General aprueba la decisión.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-ship text-amber-400 mt-0.5"></i>
+                <span><strong>Criterio Socioambiental:</strong> Evaluación previa de fletes, cadena de frío y huella de CO₂.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 italic">
+            Decisiones que contemplan costos operativos reales.
+          </div>
+        </div>
+
+        <!-- Columna 3: Pilares de Gobernanza -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3 text-lg font-bold">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Pilares de Gobernanza</h3>
+            <p class="text-xs text-slate-400 mb-3">Buenas prácticas corporativas:</p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-book text-emerald-400 mt-0.5"></i>
+                <span><strong>Trazabilidad:</strong> Bitácora completa con los prompts estructurados y usuarios responsables.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-users text-emerald-400 mt-0.5"></i>
+                <span><strong>Comité Interdisciplinario:</strong> Comercial, Operaciones, Legal y TI para neutralizar sesgos.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-eye text-emerald-400 mt-0.5"></i>
+                <span><strong>Transparencia:</strong> Declaración formal del uso de Julius AI en el informe ejecutivo.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 italic">
+            Auditoría reproducible paso a paso.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: CONCLUSIONES & PLAN DE ACCIÓN ESTRATÉGICO -->
+    <section id="slide-6" class="slide flex-col gap-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+        <div>
+          <span class="text-xs font-bold text-sky-400 uppercase tracking-widest">Cierre Ejecutivo</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">Conclusiones y Hoja de Ruta Estratégica</h2>
+        </div>
+        <div class="text-xs text-sky-300 bg-sky-950/60 border border-sky-800 px-3 py-1 rounded-full">
+          Metas Cuantificables
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Metas y Diagnóstico -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl">
+            <h3 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-flag-checkered text-blue-400"></i> Metas Clave de Cartera
+            </h3>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
+                <span class="text-xs text-slate-300">Dependencia de EE. UU.</span>
+                <span class="text-xs sm:text-sm font-bold text-emerald-400">Bajar de 50.7% a &lt;45%</span>
+              </div>
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
+                <span class="text-xs text-slate-300">Índice HHI (Concentración)</span>
+                <span class="text-xs sm:text-sm font-bold text-emerald-400">Reducir a &lt;2,500 pts</span>
+              </div>
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
+                <span class="text-xs text-slate-300">Generación Adicional</span>
+                <span class="text-xs sm:text-sm font-bold text-indigo-400">+US$ 356K a +US$ 712K</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-gradient-to-r from-blue-950/40 to-indigo-950/40 border border-blue-800/50 rounded-2xl text-xs text-slate-300">
+            <p class="font-semibold text-blue-300 mb-1">Principio Rector Consultivo:</p>
+            "La solución ante El Niño no exige sembrar más hectáreas ni comprometer capital agrícola; radica en optimizar la mezcla comercial hacia mercados con mayor prima por kilo."
+          </div>
+        </div>
+
+        <!-- 3 Recomendaciones Ejecutivas -->
+        <div class="lg:col-span-7 bg-slate-900/70 border border-slate-800 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
+          <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-indigo-400"></i> Tres Recomendaciones Comerciales Directas
+          </h3>
+
+          <div class="space-y-3">
+            <div class="flex gap-3.5 items-start p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="h-7 w-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                1
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-white">Priorizar España y China</h4>
+                <p class="text-[11.5px] text-slate-300 mt-0.5">
+                  Presentan las mayores primas del Top 5 (+8.49% y +7.89% vs. EE. UU.). Negociar programas firmes anticipados antes de desviar carga perecible.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-3.5 items-start p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="h-7 w-7 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                2
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-white">Piloto Escalonado al 10%</h4>
+                <p class="text-[11.5px] text-slate-300 mt-0.5">
+                  Comenzar reasignando el 10% (1.89 M kg) para capturar <strong>+US$ 356,304</strong>. Monitorear fletes y mermas antes de escalar al 20%.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-3.5 items-start p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="h-7 w-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                3
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-bold text-white">Gobernanza Human-in-the-Loop Permanente</h4>
+                <p class="text-[11.5px] text-slate-300 mt-0.5">
+                  Mantener validación cruzada con aduanas, bitácora de prompts en Julius AI y aprobación colegiada entre Operaciones y Finanzas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400">
+            <span>Escuela ADEX · Noviembre 2026</span>
+            <span class="text-slate-300 font-medium">Franchesca Pozzo Rodriguez</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONTROLES DE NAVEGACIÓN Y FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center space-x-2">
+      <button onclick="changeSlide(-1)" id="btn-prev" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed text-white text-xs font-semibold rounded-lg border border-slate-800 flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-chevron-left"></i> Anterior
+      </button>
+      <button onclick="changeSlide(1)" id="btn-next" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed text-white text-xs font-semibold rounded-lg shadow-md shadow-blue-500/20 flex items-center gap-1.5 transition">
+        Siguiente <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Indicadores de Slides -->
+    <div class="flex items-center space-x-2">
+      <button onclick="goToSlide(1)" class="slide-indicator w-8 h-2 rounded-full bg-blue-500 transition-all duration-300" title="Slide 1: Portada"></button>
+      <button onclick="goToSlide(2)" class="slide-indicator w-8 h-2 rounded-full bg-slate-800 transition-all duration-300" title="Slide 2: Fase 1"></button>
+      <button onclick="goToSlide(3)" class="slide-indicator w-8 h-2 rounded-full bg-slate-800 transition-all duration-300" title="Slide 3: Fase 2A"></button>
+      <button onclick="goToSlide(4)" class="slide-indicator w-8 h-2 rounded-full bg-slate-800 transition-all duration-300" title="Slide 4: Fase 2B"></button>
+      <button onclick="goToSlide(5)" class="slide-indicator w-8 h-2 rounded-full bg-slate-800 transition-all duration-300" title="Slide 5: Fase 3"></button>
+      <button onclick="goToSlide(6)" class="slide-indicator w-8 h-2 rounded-full bg-slate-800 transition-all duration-300" title="Slide 6: Conclusiones"></button>
+    </div>
+
+    <!-- Atajos de teclado -->
+    <div class="hidden md:flex items-center gap-2 text-slate-500 text-[11px]">
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded text-slate-400">←</kbd>
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded text-slate-400">→</kbd> Navegar con flechas
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 6;
+    let chart1 = null;
+    let chart2 = null;
+
+    function updateSlide() {
+      for (let i = 1; i <= totalSlides; i++) {
+        const el = document.getElementById(`slide-${i}`);
+        if (el) el.classList.remove('active');
+      }
+      const activeEl = document.getElementById(`slide-${currentSlide}`);
+      if (activeEl) activeEl.classList.add('active');
+
+      document.getElementById('current-slide-num').innerText = currentSlide;
+      document.getElementById('btn-prev').disabled = currentSlide === 1;
+      document.getElementById('btn-next').disabled = currentSlide === totalSlides;
+
+      const dots = document.querySelectorAll('.slide-indicator');
+      dots.forEach((dot, idx) => {
+        if (idx + 1 === currentSlide) {
+          dot.classList.remove('bg-slate-800');
+          dot.classList.add('bg-blue-500', 'w-10');
+        } else {
+          dot.classList.remove('bg-blue-500', 'w-10');
+          dot.classList.add('bg-slate-800', 'w-8');
+        }
+      });
+
+      if (currentSlide === 3 && !chart1) initChart1();
+      if (currentSlide === 4 && !chart2) initChart2();
+    }
+
+    function changeSlide(direction) {
+      const target = currentSlide + direction;
+      if (target >= 1 && target <= totalSlides) {
+        currentSlide = target;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(num) {
+      if (num >= 1 && num <= totalSlides) {
+        currentSlide = num;
+        updateSlide();
+      }
+    }
+
+    // Toggle Vista Prompt 1 en Slide 3
+    let showingPrompt1 = false;
+    function togglePromptView(pNum) {
+      showingPrompt1 = !showingPrompt1;
+      const chartsView = document.getElementById('view-charts-p1');
+      const codeView = document.getElementById('view-code-p1');
+      const label = document.getElementById('label-toggle-p1');
+      const btn = document.getElementById('btn-toggle-p1');
+
+      if (showingPrompt1) {
+        chartsView.classList.add('hidden');
+        chartsView.classList.remove('grid');
+        codeView.classList.remove('hidden');
+        codeView.classList.add('grid');
+        label.innerText = 'Ver Gráficos & Descomposición';
+        btn.className = 'text-xs bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-300 border border-emerald-500/50 px-3 py-1 rounded-full transition flex items-center gap-1.5';
+      } else {
+        codeView.classList.add('hidden');
+        codeView.classList.remove('grid');
+        chartsView.classList.remove('hidden');
+        chartsView.classList.add('grid');
+        label.innerText = 'Ver Prompt & Respuesta IA';
+        btn.className = 'text-xs bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/50 px-3 py-1 rounded-full transition flex items-center gap-1.5';
+      }
+    }
+
+    // Sub-pestañas en Slide 4 (Simulación, Heatmap, Prompt)
+    function toggleTabSlide4(tab) {
+      const sim = document.getElementById('tab-content-sim');
+      const heat = document.getElementById('tab-content-heatmap');
+      const p2 = document.getElementById('tab-content-prompt');
+
+      const btnSim = document.getElementById('tab-btn-sim');
+      const btnHeat = document.getElementById('tab-btn-heat');
+      const btnP2 = document.getElementById('tab-btn-p2');
+
+      // Reset tabs
+      sim.classList.add('hidden'); sim.classList.remove('grid');
+      heat.classList.add('hidden'); heat.classList.remove('flex');
+      p2.classList.add('hidden'); p2.classList.remove('grid');
+
+      btnSim.className = 'text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-3 py-1 rounded-lg border border-slate-700 transition';
+      btnHeat.className = 'text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-3 py-1 rounded-lg border border-slate-700 transition';
+      btnP2.className = 'text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-3 py-1 rounded-lg border border-slate-700 transition';
+
+      if (tab === 'sim') {
+        sim.classList.remove('hidden'); sim.classList.add('grid');
+        btnSim.className = 'text-xs bg-blue-600 text-white font-bold px-3 py-1 rounded-lg transition shadow-sm';
+      } else if (tab === 'heatmap') {
+        heat.classList.remove('hidden'); heat.classList.add('flex');
+        btnHeat.className = 'text-xs bg-amber-600 text-white font-bold px-3 py-1 rounded-lg transition shadow-sm';
+      } else if (tab === 'prompt') {
+        p2.classList.remove('hidden'); p2.classList.add('grid');
+        btnP2.className = 'text-xs bg-indigo-600 text-white font-bold px-3 py-1 rounded-lg transition shadow-sm';
+      }
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        changeSlide(1);
+      } else if (e.key === 'ArrowLeft') {
+        changeSlide(-1);
+      }
+    });
+
+    // Toggle fullscreen
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {});
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    // Chart 1: Dual Axis
+    function initChart1() {
+      const ctx = document.getElementById('chartFobPrecio').getContext('2d');
+      chart1 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2023', '2024', '2025'],
+          datasets: [
+            {
+              label: 'Valor FOB (US$ Millones)',
+              data: [147.7, 212.7, 181.0],
+              backgroundColor: 'rgba(59, 130, 246, 0.75)',
+              borderColor: 'rgb(59, 130, 246)',
+              borderWidth: 1.5,
+              borderRadius: 6,
+              yAxisID: 'y'
+            },
+            {
+              label: 'Precio Promedio FOB (US$/kg)',
+              data: [6.26, 5.80, 4.94],
+              type: 'line',
+              borderColor: '#f43f5e',
+              backgroundColor: '#f43f5e',
+              borderWidth: 3,
+              pointRadius: 6,
+              pointHoverRadius: 8,
+              pointBackgroundColor: '#ffffff',
+              yAxisID: 'y1'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { labels: { color: '#94a3b8', font: { size: 12 } } },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  let label = context.dataset.label || '';
+                  if (label) label += ': ';
+                  if (context.dataset.yAxisID === 'y') {
+                    label += 'US$ ' + context.parsed.y + ' M';
+                  } else {
+                    label += 'US$ ' + context.parsed.y + '/kg';
+                  }
+                  return label;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: '#94a3b8' },
+              grid: { color: 'rgba(51, 65, 85, 0.3)' }
+            },
+            y: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              title: { display: true, text: 'US$ Millones', color: '#60a5fa' },
+              ticks: { color: '#94a3b8' },
+              grid: { color: 'rgba(51, 65, 85, 0.3)' }
+            },
+            y1: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              title: { display: true, text: 'US$/kg', color: '#f43f5e' },
+              min: 4,
+              max: 7,
+              ticks: { color: '#f43f5e' },
+              grid: { drawOnChartArea: false }
+            }
+          }
+        }
+      });
+    }
+
+    // Chart 2: Top 5 vs EE. UU.
+    function initChart2() {
+      const ctx = document.getElementById('chartTop5Precios').getContext('2d');
+      chart2 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Estados Unidos', 'Reino Unido', 'Países Bajos', 'Hong Kong', 'China', 'España'],
+          datasets: [{
+            label: 'Precio FOB 2025 (US$/kg)',
+            data: [4.86, 4.91, 4.96, 5.13, 5.24, 5.27],
+            backgroundColor: [
+              'rgba(148, 163, 184, 0.6)',
+              'rgba(99, 102, 241, 0.7)',
+              'rgba(99, 102, 241, 0.7)',
+              'rgba(16, 185, 129, 0.75)',
+              'rgba(16, 185, 129, 0.85)',
+              'rgba(16, 185, 129, 0.95)'
+            ],
+            borderColor: [
+              '#94a3b8',
+              '#818cf8',
+              '#818cf8',
+              '#34d399',
+              '#10b981',
+              '#059669'
+            ],
+            borderWidth: 1.5,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ` US$ ${ctx.parsed.x.toFixed(2)}/kg`
+              }
+            }
+          },
+          scales: {
+            x: {
+              min: 4.5,
+              max: 5.5,
+              ticks: { color: '#94a3b8' },
+              grid: { color: 'rgba(51, 65, 85, 0.3)' },
+              title: { display: true, text: 'US$ por Kilogramo', color: '#94a3b8' }
+            },
+            y: {
+              ticks: { color: '#e2e8f0', font: { weight: 'bold' } },
+              grid: { display: false }
+            }
+          }
+        }
+      });
+    }
+
+    // Scenarios
+    const scenarios = {
+      10: { kg: '1,887,365 kg (1.89 M kg)', ingreso: '+US$ 356,304', pct: '+0.20% del total 2025' },
+      15: { kg: '2,831,048 kg (2.83 M kg)', ingreso: '+US$ 534,455', pct: '+0.30% del total 2025' },
+      20: { kg: '3,774,731 kg (3.77 M kg)', ingreso: '+US$ 712,607', pct: '+0.40% del total 2025' }
+    };
+
+    function setScenario(scen) {
+      document.getElementById('scen-kg').innerText = scenarios[scen].kg;
+      document.getElementById('scen-ingreso').innerText = scenarios[scen].ingreso;
+      document.getElementById('scen-pct').innerText = scenarios[scen].pct;
+
+      [10, 15, 20].forEach(s => {
+        const btn = document.getElementById(`btn-scen-${s}`);
+        if (s === scen) {
+          btn.className = 'scenario-btn p-2.5 rounded-xl border border-blue-500 bg-blue-600/30 text-white font-bold text-center transition';
+          btn.querySelector('span').className = 'block text-[10px] text-slate-300 font-normal';
+        } else {
+          btn.className = 'scenario-btn p-2.5 rounded-xl border border-slate-800 bg-slate-900 text-slate-300 font-bold text-center transition hover:border-slate-600';
+          btn.querySelector('span').className = 'block text-[10px] text-slate-400 font-normal';
+        }
+      });
+    }
+
+    updateSlide();
+  </script>
+</body>
+</html>
